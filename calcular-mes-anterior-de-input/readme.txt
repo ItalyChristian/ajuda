@@ -1,0 +1,1 @@
+Função em Javascript para calcular mês anterior de um input que foi preenchido pelo usuário e recebeu uma máscara de data 
