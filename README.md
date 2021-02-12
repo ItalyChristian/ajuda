@@ -1,2 +1,3 @@
 # ajuda
-Soluções de Problemas
+
+Repositório para guardar algumas Soluções de Problemas
