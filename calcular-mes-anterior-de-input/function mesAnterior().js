@@ -1,3 +1,6 @@
+//  Dev: Italy Christian
+//  Version: 1.0.0
+
 function mesAnterior(){
 	
 	var pegaData =  $("#inserir-data").val(); 
