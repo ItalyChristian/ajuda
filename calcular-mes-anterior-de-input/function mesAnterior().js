@@ -7,10 +7,17 @@ function mesAnterior(){
 	// busca a data preenchida pelo usuario (ex: pegaData = "05/07/2021")
 	var buscaMes = pegaData.substring(3, 5);
 	//encontra na string os numeros referentes ao mês (ex: buscaMes = "07")
-	
+	var buscaAno = pegaData.substring(8, 11);
+	//encontra na string os numeros referentes aos ultimos dígidos do ano (ex: buscaMes = "21")
 	
 	switch (buscaMes) {
 	    case "01":
+			var mudaMes = buscaMes.replace(buscaMes, "12");
+			var mudaAno = buscaAno - parseInt(1);
+			var mudaMesF = pegaData.replace(pegaData.substring(3, 5), mudaMes);
+			var finalData = mudaMesF.replace(pegaData.substring(8,11), mudaAno);
+			break;
+	        
 	    case "02":
 	    case "03":
 	    case "04":
