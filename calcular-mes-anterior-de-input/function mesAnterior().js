@@ -3,18 +3,24 @@
 
 function mesAnterior(){
 	
+	// lê o campo com data preenchida pelo usuario (ex: pegaData = "05/07/2021")
 	var pegaData =  $("#inserir-data").val(); 
-	// busca a data preenchida pelo usuario (ex: pegaData = "05/07/2021")
-	var buscaMes = pegaData.substring(3, 5);
 	//encontra na string os numeros referentes ao mês (ex: buscaMes = "07")
+	var buscaMes = pegaData.substring(3, 5);
+	//encontra na string os números referentes aos ultimos dígidos do ano (ex: buscaMes = "21")
 	var buscaAno = pegaData.substring(8, 11);
-	//encontra na string os numeros referentes aos ultimos dígidos do ano (ex: buscaMes = "21")
 	
 	switch (buscaMes) {
 	    case "01":
+			//(ex: pegaData = "05/01/2021")
+			
+			//substitui o mês de janeiro por dezembro 
 			var mudaMes = buscaMes.replace(buscaMes, "12");
+			//subtrai 1 do valor equivalente à década
 			var mudaAno = buscaAno - parseInt(1);
+			//insere na string da data o novo valor correspondente ao mês
 			var mudaMesF = pegaData.replace(pegaData.substring(3, 5), mudaMes);
+			//insere na variavel anterior referente ao ano
 			var finalData = mudaMesF.replace(pegaData.substring(8,11), mudaAno);
 			break;
 	        
@@ -41,6 +47,7 @@ function mesAnterior(){
 
 	    case "10":
 	    		var subtraindo = buscaMes - parseInt(1);
+			//depois da subtração precisamos incluir o "0" novamente na string, caso contrário teremos uma data como "05/9/2021"
 			var arrumar2 = buscaMes.replace(buscaMes, ("0" + subtraindo));
 			var finalData = pegaData.replace(pegaData.substring(3, 5), arrumar2);
 	        break;
