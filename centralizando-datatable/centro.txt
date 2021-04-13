@@ -1,0 +1,11 @@
+
+.table.dataTable.table{
+	margin: auto;
+}
+
+
+.dataTables_length{
+	margin-left: 30px;
+}
+
+
