@@ -1,0 +1,4 @@
+Algumas versões que utilizei do datatable apresentaram conflito com outras bibliotecas e por isso ficaram mal posicionadas 
+(ex: botões fora da centralização da tabela, tabela mais para direita.. ) 
+Como normalmente utilizamos a versão mimificada, nem sempre é fácil encontrar em qual tag ou classe podemos corrigir esses detalhes
+Segue então o arquivo com as classes que podem estar dando problema...
